@@ -1,0 +1,36 @@
+--- a/naemon/configuration.c	2013-12-19 14:52:58.000000000 +0100
++++ b/naemon/configuration.c	2013-12-24 00:32:24.870409508 +0100
+@@ -1523,10 +1523,6 @@
+ 	/*****************************************/
+ 	/* check each service...                 */
+ 	/*****************************************/
+-	if (get_service_count() == 0) {
+-		logit(NSLOG_VERIFICATION_ERROR, TRUE, "Error: There are no services defined!");
+-		errors++;
+-	}
+ 	total_objects = 0;
+ 	for (temp_service = service_list; temp_service != NULL; temp_service = temp_service->next) {
+ 
+@@ -1606,11 +1602,6 @@
+ 	/*****************************************/
+ 	/* check all hosts...                    */
+ 	/*****************************************/
+-	if (get_host_count() == 0) {
+-		logit(NSLOG_VERIFICATION_ERROR, TRUE, "Error: There are no hosts defined!");
+-		errors++;
+-	}
+-
+ 	total_objects = 0;
+ 	for (temp_host = host_list; temp_host != NULL; temp_host = temp_host->next) {
+ 
+@@ -1743,10 +1734,6 @@
+ 	/*****************************************/
+ 	/* check all contacts...                 */
+ 	/*****************************************/
+-	if (contact_list == NULL) {
+-		logit(NSLOG_VERIFICATION_ERROR, TRUE, "Error: There are no contacts defined!");
+-		errors++;
+-	}
+ 	for (temp_contact = contact_list, total_objects = 0; temp_contact != NULL; temp_contact = temp_contact->next, total_objects++) {
+ 
+ 		/* check service notification commands */

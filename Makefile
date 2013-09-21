@@ -18,18 +18,22 @@ PACKAGES=perl-modules \
          mysql-omd \
          icinga \
          nagios \
+         naemon \
          nagios-plugins \
          nagvis \
          nrpe \
          nsca \
          omd \
          pnp4nagios \
+         pnp4nagios4 \
          rrdtool \
          shinken \
          thruk \
          maintenance \
          gearmand \
          mod-gearman \
+         mod-gearman2 \
+         naemon-livestatus \
          patch \
          nail \
          notifications-tt
